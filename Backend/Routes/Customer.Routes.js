@@ -2,7 +2,7 @@
 
 const express = require("express");
 const router = express.Router();
-const customerController = require("../Controllers/Customer.controller");
+const customerController = require("../Controllers/Customer.controller.js");
 
 router.get("/count", customerController.getCustomerCount);
 

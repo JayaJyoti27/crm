@@ -1,6 +1,6 @@
 // services/customer.service.js
 
-const Customer = require("../Models/Customer.model");
+const Customer = require("../Models/Customer.model.js");
 
 const createCustomer = async (data) => {
   const customer = new Customer(data);
