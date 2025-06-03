@@ -1,0 +1,31 @@
+const dotenv = require("dotenv");
+dotenv.config();
+const express = require("express");
+const app = express();
+const cors = require("cors");
+app.use(cors());
+app.use(express.json());
+
+const customerRoutes = require("./Routes/Customer.Routes");
+const orderRoutes = require("./Routes/Orders.Routes");
+const campaignRoutes = require("./Routes/Campaign.Routes");
+const segmentRoutes = require("./Routes/Segment.Routes");
+const uploadRoutes = require("./Routes/Uploads.Routes");
+const aiRoutes = require("./Routes/Ai.Routes");
+const authRoutes = require("./Routes/Auth.Routes");
+const vendorRoutes = require("./Routes/Vendor.Routes");
+const deliveryReciept = require("./Routes/DelieveryReciept.Routes");
+app.use("/auth", authRoutes);
+const verifyToken = require("./middlewares/Auth");
+app.use("/campaign", verifyToken, campaignRoutes);
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+app.use("/customers", customerRoutes);
+app.use("/orders", orderRoutes);
+app.use("/vendor", vendorRoutes);
+app.use("/delievery", deliveryReciept);
+app.use("/segment", segmentRoutes);
+app.use("/uploads", uploadRoutes);
+app.use("/ai", aiRoutes);
+module.exports = app;
