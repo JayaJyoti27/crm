@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const uploadController = require("../Controllers/Uploads.controller");
+const uploadController = require("../Controllers/Uploads.controller.js");
+const Upload = require("../Models/Uploads.model.js");
 
 // Import your customer and order models directly
-const CustomerModel = require("../Models/Customer.Model");
-const OrderModel = require("../Models/Order.Model");
+const CustomerModel = require("../Models/Customer.model.js");
+const OrderModel = require("../Models/Order.model.js");
 
 // Routes for upload history
 router.get("/uploadHistory", uploadController.getUploadHistory);

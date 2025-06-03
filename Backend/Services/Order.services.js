@@ -1,4 +1,4 @@
-const Order = require("../Models/Order.model");
+const Order = require("../Models/Order.model.js");
 
 const createOrder = async (data) => {
   const order = new Order(data);

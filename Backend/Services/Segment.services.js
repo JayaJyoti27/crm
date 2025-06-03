@@ -1,4 +1,4 @@
-const Customer = require("../Models/Customer.model");
+const Customer = require("../Models/Customer.model.js");
 
 const getCustomersByRules = async (rules) => {
   if (!rules.length) return [];

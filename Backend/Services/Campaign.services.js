@@ -1,5 +1,5 @@
-const Campaign = require("../Models/Campaign.model");
-const CommunicationLog = require("../Models/CommunicationLog.model");
+const Campaign = require("../Models/Campaign.model.js");
+const CommunicationLog = require("../Models/CommunicationLog.model.js");
 
 const createCampaign = async (data) => {
   const campaign = new Campaign({

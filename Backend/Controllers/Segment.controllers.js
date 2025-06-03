@@ -1,8 +1,8 @@
-const CustomerService = require("../Services/Customer.services");
-const OrderService = require("../Services/Order.services");
-const { getCustomersByRules } = require("../Services/Segment.services");
-const SegmentModel = require("../Models/Segments.model");
-const CampaignModel = require("../Models/Campaign.model"); // import your Campaign model here
+const CustomerService = require("../Services/Customer.services.js");
+const OrderService = require("../Services/Order.services.js");
+const { getCustomersByRules } = require("../Services/Segment.services.js");
+const SegmentModel = require("../Models/Segments.model.js");
+const CampaignModel = require("../Models/Campaign.model.js"); // import your Campaign model here
 const axios = require("axios");
 exports.getConversionRate = async (req, res) => {
   try {

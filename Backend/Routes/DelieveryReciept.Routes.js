@@ -1,7 +1,7 @@
 // POST /delivery-receipt
 const express = require("express");
 const router = express.Router();
-const Campaign = require("../Models/Campaign.model");
+const Campaign = require("../Models/Campaign.model.js");
 router.post("/receipt", async (req, res) => {
   const { campaignId, recipient, status } = req.body;
 

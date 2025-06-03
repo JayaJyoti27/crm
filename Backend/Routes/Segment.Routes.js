@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const segmentController = require("../Controllers/Segment.controllers");
+const segmentController = require("../Controllers/Segment.controllers.js");
 console.log("segmentController:", segmentController);
 // Define all routes clearly
 router.get("/all", segmentController.getSegments); // ✅ NEW: fetch all segments

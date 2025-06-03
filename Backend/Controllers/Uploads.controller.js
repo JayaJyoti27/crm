@@ -1,4 +1,4 @@
-const uploadServices = require("../Services/Uploads.services");
+const uploadServices = require("../Services/Uploads.services.js");
 
 // Make sure to install this: npm install csv-parser
 
